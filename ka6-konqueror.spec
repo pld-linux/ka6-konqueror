@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.02.2
+%define		kdeappsver	24.05.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		konqueror
 Summary:	konqueror
 Name:		ka6-%{kaname}
-Version:	24.02.2
+Version:	24.05.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	08ab21d6f56b7525c3fe1c0ced07b307
+# Source0-md5:	c6888299fb9be85c380d25b4c494e9bf
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -171,7 +171,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/webarchiverpluginkwebkitpart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/uachangerplugin.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webarchiverplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/webarchivethumbnail.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/akregatorkonqfeediconwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/autorefreshwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/babelfishpluginwebenginepart_kpartplugins.so
@@ -179,6 +178,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/konqueror_kget_browser_integrationwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/uachangerpluginwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/webarchiverpluginwebenginepart_kpartplugins.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/thumbcreator/webarchivethumbnail.so
 %{_datadir}/akregator/pics/feed.png
 %{_desktopdir}/bookmarks.desktop
 %{_desktopdir}/kcm_bookmarks.desktop
