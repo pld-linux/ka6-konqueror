@@ -43,6 +43,7 @@ BuildRequires:	tidy-devel
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xz
 BuildRequires:	zlib-devel
+Requires:	%{name}-data = %{version}-%{release}
 ExcludeArch:	x32
 Obsoletes:	ka5-%{kaname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -61,6 +62,18 @@ przeglądanie www przy użyciu KHTML lub KDEWebKit jako silników
 renderowania; zarządzanie plikami używając większości możliwości
 Dolphina (łącznie z kontrolą wersji, menu i podstawowym UI).
 
+%package data
+Summary:	Data files for %{kaname}
+Summary(pl.UTF-8):	Dane dla %{kaname}
+Group:		X11/Applications
+Obsoletes:	ka5-%{kaname}-data < %{version}
+BuildArch:	noarch
+
+%description data
+Data files for %{kaname}.
+
+%description data -l pl.UTF-8
+Dane dla %{kaname}.
 
 %package devel
 Summary:	Header files for %{kaname} development
@@ -106,7 +119,7 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files -f %{kaname}.lang
+%files
 %defattr(644,root,root,755)
 /etc/xdg/autostart/konqy_preload.desktop
 /etc/xdg/konqsidebartngrc
@@ -181,6 +194,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/uachangerpluginwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/webarchiverpluginwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/thumbcreator/webarchivethumbnail.so
+
+%files data -f %{kaname}.lang
+%defattr(644,root,root,755)
 %{_datadir}/akregator/pics/feed.png
 %{_desktopdir}/bookmarks.desktop
 %{_desktopdir}/kcm_bookmarks.desktop
