@@ -138,6 +138,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/akregatorkonqfeedicon.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/autorefresh.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/babelfishplugin.so
+%dir %{_libdir}/qt6/plugins/dolphinpart
+%dir %{_libdir}/qt6/plugins/dolphinpart/kpartplugins
 %attr(755,root,root) %{_libdir}/qt6/plugins/dolphinpart/kpartplugins/dirfilterplugin.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/dolphinpart/kpartplugins/kimgallery.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/dolphinpart/kpartplugins/konq_shellcmdplugin.so
@@ -146,6 +148,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/parts/fsviewpart.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/parts/konq_sidebar.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/parts/webenginepart.so
+%dir %{_libdir}/qt6/plugins/khtml
+%dir %{_libdir}/qt6/plugins/khtml/kpartplugins
 %attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/akregatorkonqfeediconkhtml_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/autorefreshkhtml_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/babelfishpluginkhtml_kpartplugins.so
@@ -177,6 +181,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/khtml_tabs.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/khtml_useragent.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kget_browser_integration.so
+%dir %{_libdir}/qt6/plugins/kwebkitpart
+%dir %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins
 %attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/akregatorkonqfeediconkwebkitpart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/autorefreshkwebkitpart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/babelfishpluginkwebkitpart_kpartplugins.so
@@ -186,6 +192,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/webarchiverpluginkwebkitpart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/uachangerplugin.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webarchiverplugin.so
+%dir %{_libdir}/qt6/plugins/webenginepart
+%dir %{_libdir}/qt6/plugins/webenginepart/kpartplugins
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/akregatorkonqfeediconwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/autorefreshwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/babelfishpluginwebenginepart_kpartplugins.so
@@ -199,6 +207,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files data -f %{kaname}.lang
 %defattr(644,root,root,755)
+%dir %{_datadir}/akregator
+%dir %{_datadir}/akregator/pics
 %{_datadir}/akregator/pics/feed.png
 %{_desktopdir}/bookmarks.desktop
 %{_desktopdir}/kcm_bookmarks.desktop
@@ -214,11 +224,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dbus-1/interfaces/org.kde.Konqueror.MainWindow.xml
 %{_iconsdir}/hicolor/*x*/apps/*.png
 %{_iconsdir}/hicolor/*x*/actions/*.png
+%dir %{_datadir}/kcmcss
 %{_datadir}/kcmcss/template.css
 %{_datadir}/kconf_update/webenginepart.upd
+%dir %{_datadir}/kcontrol
+%dir %{_datadir}/kcontrol/pics
 %{_datadir}/kcontrol/pics/onlyone.png
 %{_datadir}/kcontrol/pics/overlapping.png
+%dir %{_datadir}/kf6/kbookmark
 %{_datadir}/kf6/kbookmark/directory_bookmarkbar.desktop
+%dir %{_datadir}/kio_bookmarks
 %{_datadir}/kio_bookmarks/kio_bookmarks.css
 %{_datadir}/konqsidebartng
 %{_datadir}/konqueror
@@ -226,6 +241,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/qlogging-categories6/akregatorplugin.categories
 %{_datadir}/qlogging-categories6/fsview.categories
 %{_datadir}/qlogging-categories6/konqueror.categories
+%dir %{_datadir}/webenginepart
 %{_datadir}/webenginepart/error.html
 
 %files devel
