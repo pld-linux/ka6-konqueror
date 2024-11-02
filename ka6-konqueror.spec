@@ -45,7 +45,7 @@ BuildRequires:	xz
 BuildRequires:	zlib-devel
 Requires:	%{name}-data = %{version}-%{release}
 Obsoletes:	ka5-%{kaname} < %{version}
-ExcludeArch:	x32
+ExcludeArch:	x32 i686
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
