@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.12.3
+%define		kdeappsver	25.04.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		konqueror
 Summary:	konqueror
 Name:		ka6-%{kaname}
-Version:	24.12.3
+Version:	25.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	b044ff4858446838f451c0022b7ac032
+# Source0-md5:	924b63acfe0b00b273f9b9cc63ae1554
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -122,6 +122,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 /etc/xdg/autostart/konqy_preload.desktop
+/etc/xdg/konqautofiltersrc
 /etc/xdg/konqsidebartngrc
 /etc/xdg/translaterc
 /etc/xdg/useragenttemplatesrc
@@ -155,6 +156,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/babelfishpluginkhtml_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/khtmlsettingspluginkhtml_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/konqueror_kget_browser_integrationkhtml_kpartplugins.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/temporarysavedirkhtml_kpartplugins.so
+
 %attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/uachangerpluginkhtml_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/webarchiverpluginkhtml_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/khtmlsettingsplugin.so
@@ -166,6 +169,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_history.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_places.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_tree.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_verticaltabbar.so
 %dir %{_libdir}/qt6/plugins/konqueror_kcms
 %attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/kcm_bookmarks.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/kcm_history.so
@@ -188,8 +192,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/babelfishpluginkwebkitpart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/khtmlsettingspluginkwebkitpart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/konqueror_kget_browser_integrationkwebkitpart_kpartplugins.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/temporarysavedirkwebkitpart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/uachangerpluginkwebkitpart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/webarchiverpluginkwebkitpart_kpartplugins.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/temporarysavedir.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/uachangerplugin.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webarchiverplugin.so
 %dir %{_libdir}/qt6/plugins/webenginepart
@@ -200,6 +206,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/khtmlsettingspluginwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/konqueror_kget_browser_integrationwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/uachangerpluginwebenginepart_kpartplugins.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/temporarysavedirwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/webarchiverpluginwebenginepart_kpartplugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/thumbcreator/webarchivethumbnail.so
 %attr(755,root,root) %{_libdir}/libKF6KonqSettings.so.*.*
