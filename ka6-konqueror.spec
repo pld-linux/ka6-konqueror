@@ -42,6 +42,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	tidy-devel
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xz
+Requires(post,postun):	desktop-file-utils
 BuildRequires:	zlib-devel
 Requires:	%{name}-data = %{version}-%{release}
 Obsoletes:	ka5-%{kaname} < %{version}
