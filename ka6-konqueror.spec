@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.240.0
 %define		qtver		6.4.0
 %define		kaname		konqueror
 Summary:	konqueror
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	3
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	0f1274657825eb43e29d2453770e1202
+# Source0-md5:	1a0b57b6bf5490b5da86ad34ce93dc0f
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
@@ -146,86 +146,86 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kcreatewebarchive
 %attr(755,root,root) %{_bindir}/kfmclient
 %attr(755,root,root) %{_bindir}/konqueror
-%attr(755,root,root) %{_libdir}/libKF6Konq.so.*.*
+%{_libdir}/libKF6Konq.so.*.*
 %{_libdir}/libKF6Konq.so.7
-%attr(755,root,root) %{_libdir}/libkonqsidebarplugin.so.*.*
+%{_libdir}/libkonqsidebarplugin.so.*.*
 %{_libdir}/libkonqsidebarplugin.so.6
-%attr(755,root,root) %{_libdir}/libkonquerorprivate.so.*.*
+%{_libdir}/libkonquerorprivate.so.*.*
 %{_libdir}/libkonquerorprivate.so.5
-%attr(755,root,root) %{_libdir}/qt6/plugins/akregatorkonqfeedicon.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/autorefresh.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/babelfishplugin.so
+%{_libdir}/qt6/plugins/akregatorkonqfeedicon.so
+%{_libdir}/qt6/plugins/autorefresh.so
+%{_libdir}/qt6/plugins/babelfishplugin.so
 %dir %{_libdir}/qt6/plugins/dolphinpart
 %dir %{_libdir}/qt6/plugins/dolphinpart/kpartplugins
-%attr(755,root,root) %{_libdir}/qt6/plugins/dolphinpart/kpartplugins/dirfilterplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/dolphinpart/kpartplugins/kimgallery.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/dolphinpart/kpartplugins/konq_shellcmdplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfileitemaction/akregatorplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/bookmarks.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/parts/fsviewpart.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/parts/konq_sidebar.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/parts/webenginepart.so
+%{_libdir}/qt6/plugins/dolphinpart/kpartplugins/dirfilterplugin.so
+%{_libdir}/qt6/plugins/dolphinpart/kpartplugins/kimgallery.so
+%{_libdir}/qt6/plugins/dolphinpart/kpartplugins/konq_shellcmdplugin.so
+%{_libdir}/qt6/plugins/kf6/kfileitemaction/akregatorplugin.so
+%{_libdir}/qt6/plugins/kf6/kio/bookmarks.so
+%{_libdir}/qt6/plugins/kf6/parts/fsviewpart.so
+%{_libdir}/qt6/plugins/kf6/parts/konq_sidebar.so
+%{_libdir}/qt6/plugins/kf6/parts/webenginepart.so
 %dir %{_libdir}/qt6/plugins/khtml
 %dir %{_libdir}/qt6/plugins/khtml/kpartplugins
-%attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/akregatorkonqfeediconkhtml_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/autorefreshkhtml_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/babelfishpluginkhtml_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/khtmlsettingspluginkhtml_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/konqueror_kget_browser_integrationkhtml_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/temporarysavedirkhtml_kpartplugins.so
+%{_libdir}/qt6/plugins/khtml/kpartplugins/akregatorkonqfeediconkhtml_kpartplugins.so
+%{_libdir}/qt6/plugins/khtml/kpartplugins/autorefreshkhtml_kpartplugins.so
+%{_libdir}/qt6/plugins/khtml/kpartplugins/babelfishpluginkhtml_kpartplugins.so
+%{_libdir}/qt6/plugins/khtml/kpartplugins/khtmlsettingspluginkhtml_kpartplugins.so
+%{_libdir}/qt6/plugins/khtml/kpartplugins/konqueror_kget_browser_integrationkhtml_kpartplugins.so
+%{_libdir}/qt6/plugins/khtml/kpartplugins/temporarysavedirkhtml_kpartplugins.so
 
-%attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/uachangerpluginkhtml_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/khtml/kpartplugins/webarchiverpluginkhtml_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/khtmlsettingsplugin.so
+%{_libdir}/qt6/plugins/khtml/kpartplugins/uachangerpluginkhtml_kpartplugins.so
+%{_libdir}/qt6/plugins/khtml/kpartplugins/webarchiverpluginkhtml_kpartplugins.so
+%{_libdir}/qt6/plugins/khtmlsettingsplugin.so
 %dir %{_libdir}/qt6/plugins/konqueror
 %dir %{_libdir}/qt6/plugins/konqueror/kpartplugins
 %dir %{_libdir}/qt6/plugins/konqueror/sidebar
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror/kpartplugins/searchbarplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_bookmarks.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_history.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_places.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_tree.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_verticaltabbar.so
+%{_libdir}/qt6/plugins/konqueror/kpartplugins/searchbarplugin.so
+%{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_bookmarks.so
+%{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_history.so
+%{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_places.so
+%{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_tree.so
+%{_libdir}/qt6/plugins/konqueror/sidebar/konqsidebar_verticaltabbar.so
 %dir %{_libdir}/qt6/plugins/konqueror_kcms
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/kcm_bookmarks.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/kcm_history.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/kcm_konq.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/kcm_performance.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/khtml_appearance.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/khtml_behavior.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/khtml_cache.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/khtml_cookies.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/khtml_filter.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/khtml_general.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/khtml_java_js.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/khtml_tabs.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kcms/khtml_useragent.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/konqueror_kget_browser_integration.so
+%{_libdir}/qt6/plugins/konqueror_kcms/kcm_bookmarks.so
+%{_libdir}/qt6/plugins/konqueror_kcms/kcm_history.so
+%{_libdir}/qt6/plugins/konqueror_kcms/kcm_konq.so
+%{_libdir}/qt6/plugins/konqueror_kcms/kcm_performance.so
+%{_libdir}/qt6/plugins/konqueror_kcms/khtml_appearance.so
+%{_libdir}/qt6/plugins/konqueror_kcms/khtml_behavior.so
+%{_libdir}/qt6/plugins/konqueror_kcms/khtml_cache.so
+%{_libdir}/qt6/plugins/konqueror_kcms/khtml_cookies.so
+%{_libdir}/qt6/plugins/konqueror_kcms/khtml_filter.so
+%{_libdir}/qt6/plugins/konqueror_kcms/khtml_general.so
+%{_libdir}/qt6/plugins/konqueror_kcms/khtml_java_js.so
+%{_libdir}/qt6/plugins/konqueror_kcms/khtml_tabs.so
+%{_libdir}/qt6/plugins/konqueror_kcms/khtml_useragent.so
+%{_libdir}/qt6/plugins/konqueror_kget_browser_integration.so
 %dir %{_libdir}/qt6/plugins/kwebkitpart
 %dir %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/akregatorkonqfeediconkwebkitpart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/autorefreshkwebkitpart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/babelfishpluginkwebkitpart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/khtmlsettingspluginkwebkitpart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/konqueror_kget_browser_integrationkwebkitpart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/temporarysavedirkwebkitpart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/uachangerpluginkwebkitpart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/webarchiverpluginkwebkitpart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/temporarysavedir.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/uachangerplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/webarchiverplugin.so
+%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/akregatorkonqfeediconkwebkitpart_kpartplugins.so
+%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/autorefreshkwebkitpart_kpartplugins.so
+%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/babelfishpluginkwebkitpart_kpartplugins.so
+%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/khtmlsettingspluginkwebkitpart_kpartplugins.so
+%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/konqueror_kget_browser_integrationkwebkitpart_kpartplugins.so
+%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/temporarysavedirkwebkitpart_kpartplugins.so
+%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/uachangerpluginkwebkitpart_kpartplugins.so
+%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/webarchiverpluginkwebkitpart_kpartplugins.so
+%{_libdir}/qt6/plugins/temporarysavedir.so
+%{_libdir}/qt6/plugins/uachangerplugin.so
+%{_libdir}/qt6/plugins/webarchiverplugin.so
 %dir %{_libdir}/qt6/plugins/webenginepart
 %dir %{_libdir}/qt6/plugins/webenginepart/kpartplugins
-%attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/akregatorkonqfeediconwebenginepart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/autorefreshwebenginepart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/babelfishpluginwebenginepart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/khtmlsettingspluginwebenginepart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/konqueror_kget_browser_integrationwebenginepart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/uachangerpluginwebenginepart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/temporarysavedirwebenginepart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/webenginepart/kpartplugins/webarchiverpluginwebenginepart_kpartplugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/thumbcreator/webarchivethumbnail.so
-%attr(755,root,root) %{_libdir}/libKF6KonqSettings.so.*.*
+%{_libdir}/qt6/plugins/webenginepart/kpartplugins/akregatorkonqfeediconwebenginepart_kpartplugins.so
+%{_libdir}/qt6/plugins/webenginepart/kpartplugins/autorefreshwebenginepart_kpartplugins.so
+%{_libdir}/qt6/plugins/webenginepart/kpartplugins/babelfishpluginwebenginepart_kpartplugins.so
+%{_libdir}/qt6/plugins/webenginepart/kpartplugins/khtmlsettingspluginwebenginepart_kpartplugins.so
+%{_libdir}/qt6/plugins/webenginepart/kpartplugins/konqueror_kget_browser_integrationwebenginepart_kpartplugins.so
+%{_libdir}/qt6/plugins/webenginepart/kpartplugins/uachangerpluginwebenginepart_kpartplugins.so
+%{_libdir}/qt6/plugins/webenginepart/kpartplugins/temporarysavedirwebenginepart_kpartplugins.so
+%{_libdir}/qt6/plugins/webenginepart/kpartplugins/webarchiverpluginwebenginepart_kpartplugins.so
+%{_libdir}/qt6/plugins/kf6/thumbcreator/webarchivethumbnail.so
+%{_libdir}/libKF6KonqSettings.so.*.*
 %ghost %{_libdir}/libKF6KonqSettings.so.?
 
 %files data -f %{kaname}.lang
