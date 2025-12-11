@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.3
+%define		kdeappsver	25.12.0
 %define		kframever	5.240.0
 %define		qtver		6.4.0
 %define		kaname		konqueror
 Summary:	konqueror
 Name:		ka6-%{kaname}
-Version:	25.08.3
-Release:	2
+Version:	25.12.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	1a0b57b6bf5490b5da86ad34ce93dc0f
+# Source0-md5:	2f6d67f385ca8ee79b342d00394496fc
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
@@ -165,17 +165,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/plugins/kf6/parts/fsviewpart.so
 %{_libdir}/qt6/plugins/kf6/parts/konq_sidebar.so
 %{_libdir}/qt6/plugins/kf6/parts/webenginepart.so
-%dir %{_libdir}/qt6/plugins/khtml
-%dir %{_libdir}/qt6/plugins/khtml/kpartplugins
-%{_libdir}/qt6/plugins/khtml/kpartplugins/akregatorkonqfeediconkhtml_kpartplugins.so
-%{_libdir}/qt6/plugins/khtml/kpartplugins/autorefreshkhtml_kpartplugins.so
-%{_libdir}/qt6/plugins/khtml/kpartplugins/babelfishpluginkhtml_kpartplugins.so
-%{_libdir}/qt6/plugins/khtml/kpartplugins/khtmlsettingspluginkhtml_kpartplugins.so
-%{_libdir}/qt6/plugins/khtml/kpartplugins/konqueror_kget_browser_integrationkhtml_kpartplugins.so
-%{_libdir}/qt6/plugins/khtml/kpartplugins/temporarysavedirkhtml_kpartplugins.so
-
-%{_libdir}/qt6/plugins/khtml/kpartplugins/uachangerpluginkhtml_kpartplugins.so
-%{_libdir}/qt6/plugins/khtml/kpartplugins/webarchiverpluginkhtml_kpartplugins.so
 %{_libdir}/qt6/plugins/khtmlsettingsplugin.so
 %dir %{_libdir}/qt6/plugins/konqueror
 %dir %{_libdir}/qt6/plugins/konqueror/kpartplugins
@@ -201,16 +190,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/plugins/konqueror_kcms/khtml_tabs.so
 %{_libdir}/qt6/plugins/konqueror_kcms/khtml_useragent.so
 %{_libdir}/qt6/plugins/konqueror_kget_browser_integration.so
-%dir %{_libdir}/qt6/plugins/kwebkitpart
-%dir %{_libdir}/qt6/plugins/kwebkitpart/kpartplugins
-%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/akregatorkonqfeediconkwebkitpart_kpartplugins.so
-%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/autorefreshkwebkitpart_kpartplugins.so
-%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/babelfishpluginkwebkitpart_kpartplugins.so
-%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/khtmlsettingspluginkwebkitpart_kpartplugins.so
-%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/konqueror_kget_browser_integrationkwebkitpart_kpartplugins.so
-%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/temporarysavedirkwebkitpart_kpartplugins.so
-%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/uachangerpluginkwebkitpart_kpartplugins.so
-%{_libdir}/qt6/plugins/kwebkitpart/kpartplugins/webarchiverpluginkwebkitpart_kpartplugins.so
 %{_libdir}/qt6/plugins/temporarysavedir.so
 %{_libdir}/qt6/plugins/uachangerplugin.so
 %{_libdir}/qt6/plugins/webarchiverplugin.so
