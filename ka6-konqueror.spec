@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.3
+%define		kdeappsver	26.08.0
 %define		kframever	5.240.0
 %define		qtver		6.4.0
 %define		kaname		konqueror
 Summary:	konqueror
 Name:		ka6-%{kaname}
-Version:	26.04.3
+Version:	26.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	13bd169202e487c049ffa2f8f40652b6
+# Source0-md5:	a7b13ef28c0705694bd8813dda3f7045
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
